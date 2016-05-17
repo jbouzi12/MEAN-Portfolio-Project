@@ -3,13 +3,14 @@ Here lies the final project for the MEAN Stack course, which is a full stack app
 
 ## Features
 The application will consist of the following features: 
-1. Users can use sign up and login using the Spotify API
-2. Users can search for artists by name or genre
-3. Users can search for albums by name or genre
-4. Users can create, modify, and delete their "Top 5" list
+
+* Users can use sign up and login using the Spotify API
+* Users can search for artists by name or genre
+* Users can search for albums by name or genre
+* Users can create, modify, and delete their "Top 5" list
 ...* Albums are stored in the database once they are selected to a user's top 5 list
 ...* Albums consist of album artwork, title, year released, genre, and the track list including featured artists
-5. The application will use the Spotify API to pull artist and album data
+* The application will use the Spotify API to pull artist and album data
 
 ## Ice Box Features
 1. Users can vote on other user's top 5 list
