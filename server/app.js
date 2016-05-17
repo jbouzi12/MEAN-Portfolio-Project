@@ -14,6 +14,13 @@ app.use(function(req, res, next){ // enable CORS (will refactor into middleware 
 	next();
 });
 
+// Routes
+
+app.get('/search', function(req, res){
+	// get results from spitify api
+	res.send(200);
+});
+
 app.listen(port, function(){
 	console.log('listening on port: ', port);
 });
