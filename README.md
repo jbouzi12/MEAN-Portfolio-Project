@@ -8,8 +8,8 @@ The application will consist of the following features:
 * Users can search for artists by name or genre
 * Users can search for albums by name or genre
 * Users can create, modify, and delete their "Top 5" list
-...* Albums are stored in the database once they are selected to a user's top 5 list
-...* Albums consist of album artwork, title, year released, genre, and the track list including featured artists
+..* Albums are stored in the database once they are selected to a user's top 5 list
+..* Albums consist of album artwork, title, year released, genre, and the track list including featured artists
 * The application will use the Spotify API to pull artist and album data
 
 ## Ice Box Features
