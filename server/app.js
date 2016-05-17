@@ -21,6 +21,10 @@ app.get('/search', function(req, res){
 	res.send(200);
 });
 
-app.listen(port, function(){
+var server = app.listen(port, function(){
+	var host = server.address().address;
+	var port = server.address().port;
 	console.log('listening on port: ', port);
 });
+
+module.exports = server;
