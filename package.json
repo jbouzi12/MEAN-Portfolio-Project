@@ -1,0 +1,19 @@
+{
+  "name": "mean-portfolio-project",
+  "version": "1.0.0",
+  "description": "My Top 5 Music List",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbouzi12/MEAN-Portfolio-Project.git"
+  },
+  "author": "Jensen Bouzi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbouzi12/MEAN-Portfolio-Project/issues"
+  },
+  "homepage": "https://github.com/jbouzi12/MEAN-Portfolio-Project#readme"
+}
