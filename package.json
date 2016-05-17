@@ -18,10 +18,13 @@
   "homepage": "https://github.com/jbouzi12/MEAN-Portfolio-Project#readme",
   "dependencies": {
     "body-parser": "^1.15.1",
+    "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
     "method-override": "^2.3.5",
     "mongoose": "^4.4.17",
-    "node-env-file": "^0.1.8"
+    "node-env-file": "^0.1.8",
+    "querystring": "^0.2.0",
+    "request": "^2.72.0"
   },
   "devDependencies": {
     "chai": "^3.2.0",
