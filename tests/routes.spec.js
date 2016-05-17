@@ -32,6 +32,5 @@ describe('Search', function(){
 	describe('Albums', function(){
 		it('should get a list of albums by genre');
 		it('should get a list of albums that match a certain name');
-		it('should ')		
 	})
 })
