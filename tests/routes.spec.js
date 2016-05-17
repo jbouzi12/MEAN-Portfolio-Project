@@ -10,8 +10,8 @@ describe('Search', function(){
 
 		it('should get a list of Artists by genre', function(done){
 			chai.request(server)
-			// .get('/search')
-			.get('/artists/:genre')
+			.get('/search')
+			.query({type: 'artist', genre: 'pop'})
 			.end(function(err, res){
 				res.should.have.status(200);
 				done();
@@ -19,8 +19,8 @@ describe('Search', function(){
 		});
 		it('should get a list of Artists that match a name', function(done){
 			chai.request(server)
-			// .get('/search')
-			.get('/artists/:name')
+			.get('/search')
+			.query({type: 'artist', name: 'Nas'})			
 			.end(function(err, res){
 				res.should.have.status(200);
 				done();
