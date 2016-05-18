@@ -9,9 +9,9 @@ var BASE_URL    = 'https://api.spotify.com/v1/';
 
 exports.search = function(req, res) {
 	var query = req.query.query || '';
-	var type = req.query.type;
+	var type = req.query.type || 'album';
 	var limit = req.query.limit || 20;
-	var url = BASE_URL + "search?query=" + query + "&limit=" + limit + "&type=" + type;
+	var url = BASE_URL + "search?q=" + query + "&limit=" + limit + "&type=" + type;
 	var opts = {
 		url: url,
 		headers: {
