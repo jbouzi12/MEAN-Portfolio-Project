@@ -9,6 +9,8 @@ var express		= require('express'),
 	cookieParser 	= require('cookie-parser');
 	scopes 			= 'user-read-private user-read-email';
 
+// Routers
+var searchRouter = require('routes/search');
 
 app.use(bodyParser.json()); 
 app.use(express.static(__dirname + '/public'));
@@ -23,10 +25,7 @@ app.use(function(req, res, next){ // enable CORS (will refactor into middleware 
 
 // Routes
 
-app.get('/search', function(req, res){
-	// get results from spitify api
-	res.send(200);
-});
+app.use('/', searchRouter);
 
 var server = app.listen(port, function(){
 	var host = server.address().address;
