@@ -32,3 +32,24 @@ exports.search = function(req, res) {
 	return deferred.promise
 
 }
+exports.browse = function(req, res){
+	var url = BASE_URL + "browse/new-releases";
+	var opts = {
+		url: url,
+		headers: {
+			'User-Agent': 'request'
+		}
+	};
+	var deferred = Q.defer();
+
+	request(opts, function(err, response, body){
+		if (!err && response.statusCode == 200) {
+			deferred.resolve(JSON.parse(body));
+		} else {
+			deferred.reject(err);
+		}
+	});
+
+	return deferred.promise
+
+}

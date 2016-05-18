@@ -40,7 +40,7 @@ describe('Search', function(){
 	});
 
 });
-describe('Browse', funciton(){
+describe('Browse', function(){
 	it('should return a 200 status code', function(done){
 		chai.request(server)
 		.get('/browse')
