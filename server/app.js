@@ -7,9 +7,6 @@ var express		= require('express'),
 	request 	= require('request'),
 	querystring = require('querystring'),
 	cookieParser 	= require('cookie-parser');
-	client_id 		= 'CLIENT_ID',
-	client_secret 	= 'CLIENT_SECRET',
-	redirect_url  	= 'REDIRECT_URL',
 	scopes 			= 'user-read-private user-read-email';
 
 
