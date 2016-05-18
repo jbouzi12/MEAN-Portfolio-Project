@@ -39,4 +39,13 @@ describe('Search', function(){
 
 	});
 
-})
+});
+describe('Browse', funciton(){
+	it('should return a 200 status code', function(done){
+		chai.request(server)
+		.get('/browse')
+		.end(function(err, res){
+			res.should.have.status(200);
+		})
+	});
+});
