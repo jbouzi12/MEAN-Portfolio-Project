@@ -9,8 +9,17 @@ var express		= require('express'),
 router.get('/search', function(req, res){
 	Spotify.search(req, res)
 		.then(function(results){
-			console.log(results.artists.items.length);
 			res.send(results.artists.items);
+		})
+		.fail(function(err){
+			res.send(err);
+		});
+});
+router.get('/browse', function(req, res){
+	Spotify.browse(req, res)
+		.then(function(results){
+			console.log(results);
+			res.send(results);
 		})
 		.fail(function(err){
 			res.send(err);
