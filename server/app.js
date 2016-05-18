@@ -10,7 +10,7 @@ var express		= require('express'),
 	scopes 			= 'user-read-private user-read-email';
 
 // Routers
-var searchRouter = require('routes/search');
+var searchRouter = require('./routes/search');
 
 app.use(bodyParser.json()); 
 app.use(express.static(__dirname + '/public'));
