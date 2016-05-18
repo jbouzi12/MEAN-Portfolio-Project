@@ -34,10 +34,15 @@ exports.search = function(req, res) {
 }
 exports.browse = function(req, res){
 	var url = BASE_URL + "browse/new-releases";
+
+	// TODO
+	// Need User Access Token (Must Set Up OAuth)
+
 	var opts = {
 		url: url,
 		headers: {
-			'User-Agent': 'request'
+			'User-Agent': 'request',
+			'access_token': 
 		}
 	};
 	var deferred = Q.defer();
