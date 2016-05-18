@@ -74,4 +74,12 @@ describe('Browse', function(){
 			done();
 		})
 	});
+	it('should return a list of 30 Recently released albums if no limit is specified', function(done){
+		chai.request(server)
+		.get('/browse')
+		.end(function(err, res){
+			res.should.have.length(30);
+			done();
+		})
+	});
 });

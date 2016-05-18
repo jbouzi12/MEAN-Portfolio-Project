@@ -26,7 +26,7 @@ router.get('/browse', function(req, res){
 	Spotify.browse(req, res)
 		.then(function(results){
 			console.log(results);
-			res.send(results);
+			res.send(results.albums);
 		})
 		.fail(function(err){
 			res.send(err);
