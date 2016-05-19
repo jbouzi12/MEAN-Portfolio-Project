@@ -42,7 +42,6 @@ exports.browse = function(req, res){
 		url: url,
 		headers: {
 			'User-Agent': 'request',
-			'access_token': 
 		}
 	};
 	var deferred = Q.defer();
