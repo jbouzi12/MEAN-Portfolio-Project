@@ -45,9 +45,9 @@ describe('Albums',function(){
 	        }
 		}
 	});
-	
+
 	describe('#create', function(){
-		it('should create a new album', function(){
-		})
+		// it('should create a new album', function(){
+		// })
 	})
 });
