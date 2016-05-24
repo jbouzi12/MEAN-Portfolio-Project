@@ -1,0 +1,18 @@
+{
+  "name": "client",
+  "description": "front end for MEAN Stack course final project",
+  "main": "index.js",
+  "authors": [
+    "Jensen Bouzi <jensen.bouzi@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jbouzi12/MEAN-Portfolio-Project",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
