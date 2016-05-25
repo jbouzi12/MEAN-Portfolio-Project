@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="topFive">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
@@ -12,6 +12,11 @@
 </head>
 <body>
 
+	<main>
+		<div data-ng-controller="HomeCtrl as vm" class="">
+			<h1>{{vm.name}}</h1>
+		</div>
+	</main>
 
 	<!-- vendor:js -->
 	<script src="/bower_components/jquery/dist/jquery.js"></script>
