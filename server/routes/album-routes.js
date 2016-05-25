@@ -10,62 +10,46 @@ router.param('id', function(req, res, next, id){
 
 router.get('/', function(req, res){
 	Album.find(function(err, actors){
-		if (err) return console.error(err);
+		if (err) res.send(err);
 		console.log(actors);
-		res.json(actors)
+		res.send(actors)
 
 	});
 });
 router.get('/:id', function(req, res){
 	Album.findOne({_id: req.id}, function(err, album){
-		if (err) return console.error(err);
+		if (err) res.send(err);
 		console.log('album', album);
-		res.json(album);
+		res.send(album);
 	});
 });
 router.post('/',function(req, res){
 	var newAlbum = new Album(req.body);
 	newAlbum.save(function(err, album, numAffected){
-		if (err) return console.error(err);
+		if (err) res.send(err);
 		// console.log('Number of documents saved: ', numAffected);
 		// console.log(album);
-		res.json(album);
+		res.send(album);
 	});
 });
 router.put('/:id', function(req, res){
-	var newAlbum = req.body;
-	var promise = Album.findById(req.id);
-	
+	var newAlbum = req.body;	
 	newAlbum.updated = new Date();
-
-	promise.then(function(err, album){
-		if (err) {
-			return console.error(err);
-		} else if (!album){
-			return (new Error('Could not locate Album'));
-		}
-		Album.update({_id: req.id}, newAlbum, function(err, response){
-			if (err) return console.error(err);
-			console.log('Operation successful with following response: ', response);
-			res.send(response);
-		});
+	
+	Album.findByIdAndUpdate({_id: req.id}, {$set: newAlbum}, function(err, response){
+		if (err)  res.send(err);
+		console.log('Operation successful with following response: ', response);
+		res.send(response);
 	});
+
 });
 router.delete('/:id', function(req, res){
-	var promise = Album.findById(req.id);
 
-	promise.then(function(err, album){
-		if (err) {
-			return console.error(err);
-		} else if (!album){
-			return (new Error('Could not locate album'));
-		}
+	Album.findByIdAndRemove(req.id, function(err){
+		if (err) res.send(err);
+		console.log('Removed album');
+		res.send(200);
 
-		album.remove(function(err){
-			if (err) return console.error(err);
-			console.log('Removed album');
-			res.send({});
-		});
 	});
 
 });
