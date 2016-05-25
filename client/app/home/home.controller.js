@@ -2,10 +2,10 @@
   'use strict';
 
   angular.module("topFive.home")
-    .controller('Home', Home);
+    .controller('HomeCtrl', Home);
 
   function Home(){
     var vm = this;
     vm.name = "Home Controller";
   }
-});
+})();
