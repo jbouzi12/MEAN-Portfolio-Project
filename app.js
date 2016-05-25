@@ -4,18 +4,19 @@ var express		= require('express'),
 	bodyParser	= require('body-parser'),
 	methodOverride = require('method-override'),
 	port 		= process.env.PORT || 8080,
+	path 		= require('path'),
 	request 	= require('request'),
 	querystring = require('querystring'),
 	cookieParser 	= require('cookie-parser');
 	scopes 			= 'user-read-private user-read-email';
 
 // Routers
-var searchRouter = require('./routes/search');
+var searchRouter = require('./server/routes/search');
 
-app.use(bodyParser.json()); 
+app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.json({ type: 'application/vnd.api+json' })); 
-app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+// app.use(bodyParser.__dirname+'/client'({ extended: false }));
 
 app.use(function(req, res, next){ // enable CORS (will refactor into middleware later)
 	res.header('Access-Control-Allow-Origin', "*");
@@ -24,7 +25,9 @@ app.use(function(req, res, next){ // enable CORS (will refactor into middleware 
 });
 
 // Routes
-
+app.use(function(req, res){
+	res.sendFile(path.join(__dirname+'/client/index.html'));
+});
 app.use('/', searchRouter);
 
 var server = app.listen(port, function(){
