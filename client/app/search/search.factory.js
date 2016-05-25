@@ -11,6 +11,10 @@
     var search = function search(options){
       return searchResource.query(options).$promise;
     }
+    
+    return {
+      search: search
+    };
   };
 
 });
