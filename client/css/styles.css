@@ -1,0 +1,15 @@
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+.jumbotron h1 {
+  margin-top: 175px;
+}
+main {
+  height: 740px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/concerts-1150042_1920.jpg);
+}
