@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('topFive.searchFactory')
+    .module('topFive.search')
         .factory('searchFactory', searchFactory);
 
   searchFactory.$inject = ['$resource'];
