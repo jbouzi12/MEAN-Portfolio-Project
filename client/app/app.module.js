@@ -1,5 +1,6 @@
 (function(){
   'use strict';
 
-  angular.module('topFive', ["ngResource", "topFive.home"]);
+  angular.module('topFive', ['topFive.home']);
+  
 })();
