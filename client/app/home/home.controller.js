@@ -6,7 +6,8 @@
 
   function Home(){
     var vm = this;
-    vm.name = "Home Controller";
+    vm.name = "My Top 5";
+    vm.description = "Discover new albums, document your favorites, and enjoy with your peers";
   }
-  
+
 })();
