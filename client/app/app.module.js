@@ -1,6 +1,6 @@
 (function(){
   'use strict';
 
-  angular.module('topFive', ['topFive.home', 'topFive.searchFactory']);
+  angular.module('topFive', ['topFive.home', 'topFive.search']);
 
 })();
