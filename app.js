@@ -14,7 +14,7 @@ var express		= require('express'),
 var searchRouter = require('./server/routes/search');
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/client'));
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 // app.use(bodyParser.__dirname+'/client'({ extended: false }));
 
