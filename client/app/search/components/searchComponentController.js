@@ -12,7 +12,7 @@
       type:'',
       query:'',
       limit:20
-    }
+    };
     vm.getResults = getResults;
 
     function getResults(resultsArr){
