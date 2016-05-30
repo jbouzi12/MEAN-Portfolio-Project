@@ -4,9 +4,10 @@
   angular.module('topFive.search')
     .controller('searchComponentController', searchComponentCtrl);
 
-  searchComponentCtrl.$inject = ['searchFactory'];
+  // searchComponentCtrl.$inject = ['searchFactory'];
 
-  function searchComponentCtrl(searchFactory){
+  // function searchComponentCtrl(searchFactory){
+  function searchComponentCtrl() {
     var vm = this;
     vm.options = {
       type:'',
