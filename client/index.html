@@ -13,10 +13,10 @@
 <body>
 
 	<main>
-		<div class="jumbotron" ng-controller="HomeCtrl as vm">
-			<h1>{{vm.name}}</h1>
-			<p>{{vm.description}}</p>
-			<!-- <search-component></search-component> -->
+		<div class="jumbotron" ng-controller="HomeCtrl as homeCtrl">
+			<h1>{{homeCtrl.name}}</h1>
+			<p>{{homeCtrl.description}}</p>
+			<search-component></search-component>
 		</div>
 	</main>
 
@@ -34,8 +34,8 @@
 	<script src="app/home/home.controller.js"></script>
 	<script src="/app/search/search.module.js"></script>
 	<script src="/app/search/search.factory.js"></script>
-	<script src="/app/search/components/searchComponentController.js"></script>
 	<script src="/app/search/components/search.component.js"></script>
+	<script src="/app/search/components/searchComponentController.js"></script>
 
 </body>
 </html>
