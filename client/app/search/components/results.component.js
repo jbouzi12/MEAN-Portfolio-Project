@@ -4,7 +4,7 @@
   angular.module('topFive.search',[])
     .component('resultsCompnent', {
       templateUrl: '/app/search/components/resultsComponentTemplate.html',
-      bindings: { onResults: '&'},
+      bindings: { results: '<'},
       controller: 'resultsComponentController',
       controllerAs: 'vm'
   });
