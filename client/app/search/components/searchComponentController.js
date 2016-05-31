@@ -14,6 +14,15 @@
       limit:20
     };
     vm.getResults = getResults;
+    vm.search = search;
+
+    function search(options){
+      searchFactory.search(vm.options).then(function(data){
+        console.log('search results', data);
+        // vm.onSearch(data);
+      });
+    }
+
 
     function getResults(resultsArr){
       // should capture results array and set it to "results"
