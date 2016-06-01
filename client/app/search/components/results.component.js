@@ -5,8 +5,8 @@
     .component('resultsCompnent', {
       templateUrl: '/app/search/components/resultsComponentTemplate.html',
       bindings: { results: '<'},
-      controller: 'resultsComponentController',
-      controllerAs: 'vm'
+      // controller: 'resultsComponentController',
+      // controllerAs: 'vm'
   });
 
 }());

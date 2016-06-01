@@ -12,12 +12,8 @@
     vm.results = [];
 
     function onSearch(results){
-      console.log('in here clicked');
-      console.log(results)
       vm.results = results;
     }
-
-    return vm;
   }
 
 })();

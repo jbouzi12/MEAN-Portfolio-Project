@@ -32,8 +32,6 @@
     // create search function that calls search factory
     // grabs results and calls vm.getResults to calls onSearch
     // REFACTOR: get rid of #getResults and call vm.onSearch directly
-    return vm;
-
   }
 
 })();
