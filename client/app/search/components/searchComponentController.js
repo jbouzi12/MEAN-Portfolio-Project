@@ -19,7 +19,13 @@
     function search(){
       searchFactory.search(vm.options).then(function(data){
         console.log('search results', data);
-        // vm.onSearch(data);
+        vm.onSearch(data);
+        vm.options = {
+          type:'',
+          query:'',
+          limit:20
+        };
+
       });
     }
 
