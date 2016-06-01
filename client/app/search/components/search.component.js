@@ -6,7 +6,7 @@
       templateUrl: '/app/search/components/searchComponentTemplate.html',
       bindings: { onSearch: '&'},
       controller: 'searchComponentController',
-      controllerAs: 'vm'
+      controllerAs: 'searchVM'
   });
 
 }());
