@@ -16,7 +16,6 @@
     // vm.getResults = getResults;
     vm.search = search;
 
-    return vm;
     function search(){
       searchFactory.search(vm.options).then(function(data){
         console.log('search results', data);
@@ -27,6 +26,8 @@
     // create search function that calls search factory
     // grabs results and calls vm.getResults to calls onSearch
     // REFACTOR: get rid of #getResults and call vm.onSearch directly
+    return vm;
+
   }
 
 })();

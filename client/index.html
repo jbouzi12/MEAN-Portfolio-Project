@@ -10,15 +10,18 @@
     <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
-<body>
+<body ng-controller="HomeCtrl as homeCtrl">
 
 	<main>
-		<div class="jumbotron" ng-controller="HomeCtrl as homeCtrl">
+		<div class="jumbotron">
 			<h1>{{homeCtrl.name}}</h1>
 			<p>{{homeCtrl.description}}</p>
-			<search-component></search-component>
+			<search-component onSearch="homeCtrl.onSearch"></search-component>
 		</div>
 	</main>
+	<section id="search-results">
+		<results-component results="homeCtrl.results"></results-component>
+	</section>
 
 	<!-- vendor:js -->
 	<script src="/bower_components/jquery/dist/jquery.js"></script>
