@@ -7,7 +7,9 @@
 
   searchFactory.$inject = ['$resource'];
   function searchFactory($resource){
-    var searchResource = $resource('http://localhost:8080/search/');
+    var searchResource = $resource('/search', {},{
+          query: {method:'GET',isArray:true}
+      });
 
     var search = function search(options){
       return searchResource.query(options).$promise;
