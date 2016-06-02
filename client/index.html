@@ -20,7 +20,7 @@
 		</div>
 	</main>
 	<section id="search-results">
-		<results-component results="homeCtrl.results"></results-component>
+		<results-component ng-if="homeCtrl.results.length > 0" results="homeCtrl.results"></results-component>
 	</section>
 
 	<!-- vendor:js -->
@@ -39,10 +39,9 @@
 	<script src="/app/search/search.module.js"></script>
 	<script src="/app/search/components/search.component.js"></script>
 	<script src="/app/search/components/searchComponentController.js"></script>
-	<script src="/app/search/results.module.js"></script>	
+	<script src="/app/search/results.module.js"></script>
 	<script src="/app/search/components/results.component.js"></script>
 	<script src="/app/search/components/results.controller.js"></script>
-	<!-- <script src="/app/search/components/searchComponentController.js"></script> -->
 	<script src="/app/search/search.factory.js"></script>
 
 </body>
