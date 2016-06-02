@@ -1,12 +1,12 @@
 (function(){
   'use strict';
 
-  angular.module('topFive.search',[])
-    .component('resultsCompnent', {
+  angular.module('topFive.results',[])
+    .component('resultsComponent', {
       templateUrl: '/app/search/components/resultsComponentTemplate.html',
       bindings: { results: '<'},
-      // controller: 'resultsComponentController',
-      // controllerAs: 'vm'
+      controller: 'resultsComponentController',
+      controllerAs: 'vm'
   });
 
 }());
