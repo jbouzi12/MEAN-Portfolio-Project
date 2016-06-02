@@ -1,5 +1,25 @@
-<section class="search-results">
-  <ul>
+<section class="search-results container">
+  <!-- <ul>
     <li ng-repeat="result in vm.results"> {{result.name}}</li>
-  </ul>
+  </ul> -->
+  <div class="row">
+  <div class="col-sm-6 col-md-4" ng-repeat="result in vm.results">
+    <div class="thumbnail">
+      <img src="{{result.images[1].url}}">
+      <div class="caption">
+        <h3>{{result.name}}</h3>
+        <p>{{result.type}}</p>
+        <p ng-if="result.album_type">Result Type: {{result.album_type}}</p>
+        <p ng-if="result.available_markets.length > 0"># of Available Markets: {{result.available_markets.length}}</p>
+        <p ng-if="result.genres">
+          Genres:
+          <span ng-repeat="genre in result.genres">{{genre}} </span>
+        </p>
+        <p ng-if="result.popularity">Popularity: {{result.popularity}}</p>
+
+        <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
+      </div>
+    </div>
+  </div>
+</div>
 </section>

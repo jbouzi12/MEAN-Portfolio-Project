@@ -12,6 +12,7 @@
     vm.results = [];
 
     function onSearch(results){
+      console.log(results);
       vm.results = results;
     }
   }
